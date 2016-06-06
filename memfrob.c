@@ -10,7 +10,7 @@ int main()
 
 	do {
 		read = fread(buffer, sizeof(unsigned char), BUFFER_SIZE, stdin);
-		for (index = 0; i != read; ++index) {
+		for (index = 0; index != read; ++index) {
 			buffer[index] ^= 42;
 		}
 		fwrite(buffer, sizeof(unsigned char), read, stdout);
@@ -18,4 +18,3 @@ int main()
 
 	return 0;
 }
-
